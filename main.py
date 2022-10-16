@@ -1,4 +1,4 @@
-from word import Word
-from case import Case
-import numpy as np
+from wordle import Word,Case
 
+rachid = Word('rachi')
+print(rachid)
