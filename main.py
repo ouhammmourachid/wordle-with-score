@@ -1,4 +1,5 @@
-from wordle import Word,Case
+from wordle import Word,Case,Combination
 
-rachid = Word('rachi')
-print(rachid)
+rachid = Combination()
+print(rachid.all)
+

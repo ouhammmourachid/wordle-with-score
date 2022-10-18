@@ -1,12 +1,7 @@
+from .constant import *
 
 class Case:
-    GREEN :str = "🟩" 
-    YELLOW :str = "🟨" 
-    GREE :str = "🟫" 
-    ALLOWED_COLORS :tuple[str] = (GREEN,YELLOW,GREE)
-    def __init__(self,combination:list[str]) -> None:
-
-        """this Class represnt the result might get when
+    """this Class represnt the result might get when
         try a word so accept only three colors which are 
         following 🟩🟨🟫to create an object :
         ```python
@@ -16,18 +11,18 @@ class Case:
         we can also use it with `char_2,..,char_5`
         to get the case on the shape of list we use 
         `case.get_list()`"""
-
-        assert combination[0] in Case.ALLOWED_COLORS, "the first in the combination is not in the allowed colors"
-        assert combination[1] in Case.ALLOWED_COLORS, "the second in the combination is not in the allowed colors"
-        assert combination[2] in Case.ALLOWED_COLORS, "the third in the combination is not in the allowed colors"
-        assert combination[3] in Case.ALLOWED_COLORS, "the forth in the combination is not in the allowed colors"
-        assert combination[4] in Case.ALLOWED_COLORS, "the fifth in the combination is not in the allowed colors"
+    def __init__(self,combination:list[str]) -> None:
+        assert combination[0] in ALLOWED_COLORS, "the first in the combination is not in the allowed colors"
+        assert combination[1] in ALLOWED_COLORS, "the second in the combination is not in the allowed colors"
+        assert combination[2] in ALLOWED_COLORS, "the third in the combination is not in the allowed colors"
+        assert combination[3] in ALLOWED_COLORS, "the forth in the combination is not in the allowed colors"
+        assert combination[4] in ALLOWED_COLORS, "the fifth in the combination is not in the allowed colors"
         
         self.char_1 = combination[0]
         self.char_2 = combination[1]
         self.char_3 = combination[2]
-        self.char_4 = combination[4]
-        self.char_5 = combination[5]
+        self.char_4 = combination[3]
+        self.char_5 = combination[4]
 
     def __str__(self) -> str:
 
