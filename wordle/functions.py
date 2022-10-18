@@ -1,5 +1,6 @@
 from .constant import *
 from .case import Case
+
 def create_cases() -> list[Case]:
     result :list = []
     for case_1 in ALLOWED_COLORS:
